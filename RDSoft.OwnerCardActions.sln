@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Api", "src\RDSoft.OwnerCardActions.Api\RDSoft.OwnerCardActions.Api.csproj", "{8704F5B1-082B-4E2E-BD6B-683159F57845}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{213EBE46-C98B-4A15-ABF7-7C4913754033}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Application", "src\RDSoft.OwnerCardActions.Application\RDSoft.OwnerCardActions.Application.csproj", "{1B14E675-6806-409E-BA73-ED7E277E4628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Domain", "src\RDSoft.OwnerCardActions.Domain\RDSoft.OwnerCardActions.Domain.csproj", "{44B22429-9FCE-4842-878F-B993633D14CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Infrastructure", "src\RDSoft.OwnerCardActions.Infrastructure\RDSoft.OwnerCardActions.Infrastructure.csproj", "{64F16444-927B-47B0-80FA-76F6CA786639}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8704F5B1-082B-4E2E-BD6B-683159F57845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8704F5B1-082B-4E2E-BD6B-683159F57845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8704F5B1-082B-4E2E-BD6B-683159F57845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8704F5B1-082B-4E2E-BD6B-683159F57845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B14E675-6806-409E-BA73-ED7E277E4628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B14E675-6806-409E-BA73-ED7E277E4628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B14E675-6806-409E-BA73-ED7E277E4628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B14E675-6806-409E-BA73-ED7E277E4628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B22429-9FCE-4842-878F-B993633D14CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B22429-9FCE-4842-878F-B993633D14CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B22429-9FCE-4842-878F-B993633D14CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B22429-9FCE-4842-878F-B993633D14CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F16444-927B-47B0-80FA-76F6CA786639}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F16444-927B-47B0-80FA-76F6CA786639}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F16444-927B-47B0-80FA-76F6CA786639}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F16444-927B-47B0-80FA-76F6CA786639}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8704F5B1-082B-4E2E-BD6B-683159F57845} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
+		{1B14E675-6806-409E-BA73-ED7E277E4628} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
+		{44B22429-9FCE-4842-878F-B993633D14CC} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
+		{64F16444-927B-47B0-80FA-76F6CA786639} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
+	EndGlobalSection
+EndGlobal

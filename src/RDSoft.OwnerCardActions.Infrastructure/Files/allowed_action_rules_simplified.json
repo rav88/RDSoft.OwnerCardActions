@@ -1,0 +1,194 @@
+[
+    {
+        "Action": "Action1",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action2",
+        "CardKinds": [
+            "Prepaid",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Inactive"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action3",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action4",
+        "CardKinds": [
+            "Prepaid",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action5",
+        "CardKinds": [
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action6",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [],
+        "CardStatusesPinRestricted": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ]
+    },
+    {
+        "Action": "Action7",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [],
+        "CardStatusesPinRestricted": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ]
+    },
+    {
+        "Action": "Action8",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action9",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action10",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action11",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action12",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action13",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    }
+]
