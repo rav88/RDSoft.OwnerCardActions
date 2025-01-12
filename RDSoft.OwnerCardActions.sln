@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.Infrastructure", "src\RDSoft.OwnerCardActions.Infrastructure\RDSoft.OwnerCardActions.Infrastructure.csproj", "{64F16444-927B-47B0-80FA-76F6CA786639}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RDSoft.OwnerCardActions.SharedKernel", "src\RDSoft.OwnerCardActions.SharedKernel\RDSoft.OwnerCardActions.SharedKernel.csproj", "{6E520313-8AF8-4F4A-BAD1-26501CDCA740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,11 +34,16 @@ Global
 		{64F16444-927B-47B0-80FA-76F6CA786639}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F16444-927B-47B0-80FA-76F6CA786639}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F16444-927B-47B0-80FA-76F6CA786639}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E520313-8AF8-4F4A-BAD1-26501CDCA740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E520313-8AF8-4F4A-BAD1-26501CDCA740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E520313-8AF8-4F4A-BAD1-26501CDCA740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E520313-8AF8-4F4A-BAD1-26501CDCA740}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8704F5B1-082B-4E2E-BD6B-683159F57845} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
 		{1B14E675-6806-409E-BA73-ED7E277E4628} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
 		{44B22429-9FCE-4842-878F-B993633D14CC} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
 		{64F16444-927B-47B0-80FA-76F6CA786639} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
+		{6E520313-8AF8-4F4A-BAD1-26501CDCA740} = {213EBE46-C98B-4A15-ABF7-7C4913754033}
 	EndGlobalSection
 EndGlobal

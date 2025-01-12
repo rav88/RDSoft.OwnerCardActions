@@ -1,56 +1,196 @@
-{
-	"Actions": [
-		{"Action1": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": false}, {"Inactive": false}, {"Active": true}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action2": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": false}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": false}, {"Inactive": true}, {"Active": false}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action3": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": true}, {"Blocked": true}, {"Expired": true}, {"Closed": true}]
-		}},
-		{"Action4": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": false}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": true}, {"Blocked": true}, {"Expired": true}, {"Closed": true}]
-		}},
-		{"Action5": {
-			"CardKinds": [{"Prepaid": false}, {"Debit": false}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": true}, {"Blocked": true}, {"Expired": true}, {"Closed": true}]
-		}},
-		{"Action6": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": "pin"}, {"Inactive": "pin"}, {"Active": "pin"}, {"Restricted": false}, {"Blocked": "pin"}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action7": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": "pin"}, {"Inactive": "pin"}, {"Active": "pin"}, {"Restricted": false}, {"Blocked": "pin"}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action8": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": false}, {"Blocked": true}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action9": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": true}, {"Blocked": true}, {"Expired": true}, {"Closed": true}]
-		}},
-		{"Action10": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action11": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": false}, {"Inactive": true}, {"Active": true}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action12": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-		{"Action13": {
-			"CardKinds": [{"Prepaid": true}, {"Debit": true}, {"Credit": true}],
-			"CardStatuses": [{"Ordered": true}, {"Inactive": true}, {"Active": true}, {"Restricted": false}, {"Blocked": false}, {"Expired": false}, {"Closed": false}]
-		}},
-	]
-}
+[
+    {
+        "Action": "Action1",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action2",
+        "CardKinds": [
+            "Prepaid",
+			"Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Inactive"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action3",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action4",
+        "CardKinds": [
+            "Prepaid",
+			"Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action5",
+        "CardKinds": [
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action6",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [],
+        "CardStatusesPinRestricted": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ]
+    },
+    {
+        "Action": "Action7",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [],
+        "CardStatusesPinRestricted": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ]
+    },
+    {
+        "Action": "Action8",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Blocked"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action9",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active",
+            "Restricted",
+            "Blocked",
+            "Expired",
+            "Closed"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action10",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action11",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action12",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    },
+    {
+        "Action": "Action13",
+        "CardKinds": [
+            "Prepaid",
+            "Debit",
+            "Credit"
+        ],
+        "CardStatuses": [
+            "Ordered",
+            "Inactive",
+            "Active"
+        ],
+        "CardStatusesPinRestricted": []
+    }
+]

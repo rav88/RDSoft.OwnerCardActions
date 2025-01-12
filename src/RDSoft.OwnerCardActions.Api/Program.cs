@@ -1,3 +1,4 @@
+using RDSoft.OwnerCardActions.Infrastructure.Config;
 using RDSoft.OwnerCardActions.Infrastructure.Extentions;
 using RDSoft.OwnerCardActions.Infrastructure.Middleware;
 
@@ -5,9 +6,16 @@ namespace RDSoft.OwnerCardActions.Api
 {
     public static class Program
     {
+        private const string CacheSettingsSectionName = "CacheSettings";
+        
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            
+            builder.Services.Configure<CacheSettings>(builder.Configuration.GetSection(CacheSettingsSectionName));
+            
+            // Add memory cache
+            builder.Services.AddCaching();
 
             // Register application services
             builder.Services.AddServices();

@@ -2,13 +2,17 @@
 using RDSoft.OwnerCardActions.Application.DTOs;
 using RDSoft.OwnerCardActions.Application.Interfaces;
 using RDSoft.OwnerCardActions.Domain.Enums;
-using RDSoft.OwnerCardActions.Infrastructure.Exceptions;
+using RDSoft.OwnerCardActions.Domain.Interfaces;
+using RDSoft.OwnerCardActions.SharedKernel.Exceptions;
 
 namespace RDSoft.OwnerCardActions.Api.Controllers;
 
 [ApiController]
 [Route("api/v1/[controller]")]
-public class CardsController(ICardService cardService, ICardActionsProvider cardActionsProvider)
+public class CardsController(
+    ILogger<CardsController> logger,
+    ICardService cardService, 
+    ICardActionsBusinessLogicProvider cardActionsBusinessLogicProvider)
     : ControllerBase
 {
     [HttpPost]
@@ -21,16 +25,12 @@ public class CardsController(ICardService cardService, ICardActionsProvider card
 
         if (card == null)
         {
+            logger.LogError("Card ({request.CardNumber}) or User ({request.UserId}) not found,", request.CardNumber, request.UserId);
             throw new CardNotFoundException(request.CardNumber, request.UserId);
         }
         
-        var allowedActions = await cardActionsProvider.GetAllowedActionsAsync(card);
+        var allowedActions = await cardActionsBusinessLogicProvider.GetAllowedActionsAsync(card);
 
-        return new GetAllowedActionsResponseDto(new List<string?>
-        {
-            Enum.GetName(AllowedAction.Action1),
-            Enum.GetName(AllowedAction.Action6),
-            Enum.GetName(AllowedAction.Action10)
-        });
+        return new GetAllowedActionsResponseDto(allowedActions);
     }
 }

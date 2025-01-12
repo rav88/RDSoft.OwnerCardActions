@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RDSoft.OwnerCardActions.Application\RDSoft.OwnerCardActions.Application.csproj" />
+      <ProjectReference Include="..\RDSoft.OwnerCardActions.SharedKernel\RDSoft.OwnerCardActions.SharedKernel.csproj" />
     </ItemGroup>
 
     <ItemGroup>

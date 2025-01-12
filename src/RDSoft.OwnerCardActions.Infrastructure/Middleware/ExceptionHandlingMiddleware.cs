@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Http;
-using RDSoft.OwnerCardActions.Infrastructure.Exceptions;
+using RDSoft.OwnerCardActions.SharedKernel.Exceptions;
 
 namespace RDSoft.OwnerCardActions.Infrastructure.Middleware;
 
