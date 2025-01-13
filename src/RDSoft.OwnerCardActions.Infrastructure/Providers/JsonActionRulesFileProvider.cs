@@ -11,7 +11,8 @@ public class JsonActionRulesFileProvider(ILogger<JsonActionRulesFileProvider> lo
 {
     private const string FilePath = "Files\\allowed_action_rules.json";
     private const string CacheKey = "allowedActionRulesets";
-
+    private static readonly JsonSerializerOptions JsonSerializerOptions = new() { PropertyNameCaseInsensitive = true };
+    
     public async Task<IEnumerable<AllowedActionRuleset>> GetActionRules(CardDetails cardDetails)
     {
         if(cache.TryGetValue<IEnumerable<AllowedActionRuleset>>(CacheKey, out var cachedData))
@@ -20,7 +21,7 @@ public class JsonActionRulesFileProvider(ILogger<JsonActionRulesFileProvider> lo
         }
         
         var fPath = Path.Combine(AppContext.BaseDirectory, FilePath);
-        string fileContentString = await GetFileContnet(fPath);
+        var fileContentString = await GetFileContent(fPath);
         var allowedActionRulesets = ParseJson(fileContentString).ToList();
         
         cache.Set(CacheKey, allowedActionRulesets);
@@ -28,7 +29,7 @@ public class JsonActionRulesFileProvider(ILogger<JsonActionRulesFileProvider> lo
         return allowedActionRulesets;
     }
 
-    private async Task<string> GetFileContnet(string jsonContent)
+    private async Task<string> GetFileContent(string jsonContent)
     {
         var fPath = Path.Combine(AppContext.BaseDirectory, FilePath);
         string fileContentString;
@@ -45,17 +46,14 @@ public class JsonActionRulesFileProvider(ILogger<JsonActionRulesFileProvider> lo
 
         return fileContentString;
     }
-    
+
     private IEnumerable<AllowedActionRuleset> ParseJson(string jsonContent)
     {
         List<AllowedActionRuleset>? rules;
-        
+
         try
         {
-            rules = JsonSerializer.Deserialize<List<AllowedActionRuleset>>(jsonContent, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            rules = JsonSerializer.Deserialize<List<AllowedActionRuleset>>(jsonContent, JsonSerializerOptions);
         }
         catch (Exception ex)
         {

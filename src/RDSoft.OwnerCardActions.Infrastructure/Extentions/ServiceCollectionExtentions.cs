@@ -14,7 +14,7 @@ public static class ServiceCollectionExtentions
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddScoped<ICardService, CardService>(); 
-        services.AddScoped<ICardActionsBusinessLogicProvider, CardActionsBusinessLogicBusinessLogicProvider>(); 
+        services.AddScoped<ICardActionsBusinessLogicProvider, CardActionsBusinessLogicProvider>(); 
         services.AddScoped<IActionRulesProvider, JsonActionRulesFileProvider>();
 
         return services;

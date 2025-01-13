@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using RDSoft.OwnerCardActions.Domain.Entities;
 using RDSoft.OwnerCardActions.Domain.Enums;
 using RDSoft.OwnerCardActions.Domain.Interfaces;
@@ -7,17 +6,16 @@ using RDSoft.OwnerCardActions.SharedKernel.Exceptions;
 
 namespace RDSoft.OwnerCardActions.Domain.Providers;
 
-public class CardActionsBusinessLogicBusinessLogicProvider(
-    ILogger<CardActionsBusinessLogicBusinessLogicProvider> logger,
-    IActionRulesProvider actionRulesProvider,
-    IMemoryCacheProvider memoryCacheProvider) 
+public class CardActionsBusinessLogicProvider(
+    ILogger<CardActionsBusinessLogicProvider> logger,
+    IActionRulesProvider actionRulesProvider) 
     : ICardActionsBusinessLogicProvider
 {
     public async Task<List<string>> GetAllowedActionsAsync(CardDetails cardDetails)
     {
         var allowedActions = new List<AllowedAction>();
-        IEnumerable<AllowedActionRuleset>? rules = await actionRulesProvider.GetActionRules(cardDetails);
-
+        var rules = await actionRulesProvider.GetActionRules(cardDetails);
+        
         if (rules == null)
         {
             logger.LogWarning("No rules found in the system.");

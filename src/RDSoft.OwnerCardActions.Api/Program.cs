@@ -4,7 +4,7 @@ using RDSoft.OwnerCardActions.Infrastructure.Middleware;
 
 namespace RDSoft.OwnerCardActions.Api
 {
-    public static class Program
+    public class Program
     {
         private const string CacheSettingsSectionName = "CacheSettings";
         
@@ -25,6 +25,9 @@ namespace RDSoft.OwnerCardActions.Api
             
             // Register swagger services
             builder.Services.AddSwagger();
+            
+            // Register logging
+            builder.Services.AddLogging();
 
             var app = builder.Build();
             
