@@ -19,8 +19,6 @@ public class CardsController(
     [Route("[action]")]
     public async Task<GetAllowedActionsResponseDto> GetAllowedActions(GetAllowedActionsRequestDto request)
     {
-        await Task.Delay(1000);
-        
         var card = await cardService.GetCardDetails(request.UserId, request.CardNumber);
 
         if (card == null)

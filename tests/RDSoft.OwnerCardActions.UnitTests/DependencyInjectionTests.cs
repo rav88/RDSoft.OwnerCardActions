@@ -51,7 +51,7 @@ public class DependencyInjectionTests
         Assert.NotNull(cardActionsBusinessLogicProvider);
         
         Assert.IsType<CardService>(cacheService);
-        Assert.IsType<JsonActionRulesFileProvider>(jsonActionRulesFileProvider);
+        Assert.IsType<JsonActionRulesFileProviderTests>(jsonActionRulesFileProvider);
         Assert.IsType<CardActionsBusinessLogicProvider>(cardActionsBusinessLogicProvider);
     }
 }

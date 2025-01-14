@@ -14,7 +14,7 @@ public class CardActionsBusinessLogicProvider(
     public async Task<List<string>> GetAllowedActionsAsync(CardDetails cardDetails)
     {
         var allowedActions = new List<AllowedAction>();
-        var rules = await actionRulesProvider.GetActionRules(cardDetails);
+        var rules = await actionRulesProvider.GetActionRules();
         
         if (rules == null)
         {

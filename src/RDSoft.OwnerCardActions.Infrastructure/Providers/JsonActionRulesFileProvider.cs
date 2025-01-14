@@ -13,7 +13,7 @@ public class JsonActionRulesFileProvider(ILogger<JsonActionRulesFileProvider> lo
     private const string CacheKey = "allowedActionRulesets";
     private static readonly JsonSerializerOptions JsonSerializerOptions = new() { PropertyNameCaseInsensitive = true };
     
-    public async Task<IEnumerable<AllowedActionRuleset>> GetActionRules(CardDetails cardDetails)
+    public async Task<IEnumerable<AllowedActionRuleset>> GetActionRules()
     {
         if(cache.TryGetValue<IEnumerable<AllowedActionRuleset>>(CacheKey, out var cachedData))
         {

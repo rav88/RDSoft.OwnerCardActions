@@ -30,6 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\RDSoft.OwnerCardActions.Api\RDSoft.OwnerCardActions.Api.csproj" />
       <ProjectReference Include="..\..\src\RDSoft.OwnerCardActions.Infrastructure\RDSoft.OwnerCardActions.Infrastructure.csproj" />
     </ItemGroup>
 
