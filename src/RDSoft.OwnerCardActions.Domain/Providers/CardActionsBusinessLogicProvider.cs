@@ -13,7 +13,7 @@ public class CardActionsBusinessLogicProvider(
 {
     public async Task<List<string>> GetAllowedActionsAsync(CardDetails cardDetails)
     {
-        var allowedActions = new List<AllowedAction>();
+        var allowedActions = new List<string>();
         var rules = await actionRulesProvider.GetActionRules();
         
         if (rules == null)
@@ -24,18 +24,16 @@ public class CardActionsBusinessLogicProvider(
         
         foreach (var rule in rules.Where(rule => rule.CardKinds.Contains(cardDetails.CardType)))
         {
-            if(rule.CardStatuses.Contains(cardDetails.CardStatus))
-            {
-                allowedActions.Add(rule.Action);
-                continue;
-            }
+            if(
+                rule.CardStatuses.Contains(cardDetails.CardStatus) 
+                || 
+                (cardDetails.IsPinSet && rule.CardStatusesPinRestricted.Contains(cardDetails.CardStatus)))
                 
-            if(cardDetails.IsPinSet && rule.CardStatusesPinRestricted.Contains(cardDetails.CardStatus))
             {
-                allowedActions.Add(rule.Action);
+                allowedActions.Add(Enum.GetName(rule.Action)!);
             }
         }
         
-        return allowedActions.Select(q => Enum.GetName(typeof(AllowedAction), q)).ToList()!;
+        return allowedActions;
     }
 }

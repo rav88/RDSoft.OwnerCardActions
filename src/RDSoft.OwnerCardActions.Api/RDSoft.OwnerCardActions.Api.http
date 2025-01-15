@@ -1,6 +1,6 @@
 @RDSoft.OwnerCardActions.Api_HostAddress = http://localhost:3000
 
-GET {{RDSoft.OwnerCardActions.Api_HostAddress}}/weatherforecast/
+GET {{RDSoft.OwnerCardActions.Api_HostAddress}}/CardActions/
 Accept: application/json
 
 ###

@@ -12,7 +12,7 @@ namespace RDSoft.OwnerCardActions.Api.Controllers;
 public class CardsController(
     ILogger<CardsController> logger,
     ICardService cardService, 
-    ICardActionsBusinessLogicProvider cardActionsBusinessLogicProvider)
+    ICardActionsBusinessLogicService cardActionsBusinessLogicService)
     : ControllerBase
 {
     [HttpPost]
@@ -27,7 +27,7 @@ public class CardsController(
             throw new CardNotFoundException(request.CardNumber, request.UserId);
         }
         
-        var allowedActions = await cardActionsBusinessLogicProvider.GetAllowedActionsAsync(card);
+        var allowedActions = await cardActionsBusinessLogicService.GetAllowedActionsAsync(card);
 
         return new GetAllowedActionsResponseDto(allowedActions);
     }

@@ -8,33 +8,23 @@ It deliveres allowed actions for certain users card types<br />
 - [Solution structure](#solution-structure)
 
 ## Description
-To be done...
+Grabs card details from external service and returns allowed actions for the card based on its type and status.
 
 ## Solution structure
 
 1) RDSoftOwnerCardActions.Api:
 
-Zawiera kontrolery API i konfigurację WebAPI.
-Obsługuje żądania HTTP i mapuje dane z/do warstwy aplikacyjnej.
-Zajmuje się obsługą formatów JSON oraz walidacją danych wejściowych.
+Contains API controllers and WebAPI configuration. Handles HTTP requests and maps data to/from the application layer. Manages JSON formats and input data validation.
 
 
 2) RDSoftOwnerCardActions.Application:
 
-Implementuje logikę aplikacyjną, czyli przetwarzanie danych wejściowych i generowanie dozwolonych akcji dla kart.
-Zawiera interfejsy do komunikacji z innymi warstwami, np. domeną i infrastrukturą.
-Odpowiada za obsługę przypadków brzegowych i reguł biznesowych.
+Implements application logic, including processing input data and generating allowed actions for cards. Contains interfaces for communication with other layers, such as the domain and infrastructure. Responsible for handling edge cases and business rules.
 
 3) RDSoftOwnerCardActions.Domain:
 
-
-Zawiera logikę biznesową w najczystszej postaci, niezależną od infrastruktury.
-Klasy domenowe, takie jak CardDetails, CardType, CardStatus, oraz logikę mapującą typ/status karty na akcje.
-Implementuje wzorce projektowe, takie jak specyfikacja czy fabryka, jeśli będą potrzebne.
-
+Contains business logic in its purest form, independent of infrastructure. Includes domain classes like CardDetails, CardType, CardStatus, as well as logic for mapping card types/statuses to actions. Implements design patterns such as Specification or Factory if needed.
 
 4) RDSoftOwnerCardActions.Infrastructure:
 
-
-Odpowiada za komunikację z zewnętrznymi usługami lub bazami danych.
-Może zawierać implementację repozytoriów, klienta HTTP dla pobierania szczegółów kart (na razie symulowaną), oraz logikę związana z konfiguracją dostępu do danych.
+Handles communication with external services or databases. May include the implementation of repositories, an HTTP client for retrieving card details (currently simulated), and logic related to data access configuration.obierania szczegółów kart (na razie symulowaną), oraz logikę związana z konfiguracją dostępu do danych.

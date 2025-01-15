@@ -28,13 +28,13 @@ public class CardControllerTests
                 IsPinSet: true,
                 CardStatus: CardStatus.Active
             ));
-        var cardActionsBusinessLogicProviderMock = new Mock<ICardActionsBusinessLogicProvider>();
-        cardActionsBusinessLogicProviderMock.Setup(x => x.GetAllowedActionsAsync(It.IsAny<CardDetails>()))
+        var cardActionsBusinessLogicServiceMock = new Mock<ICardActionsBusinessLogicService>();
+        cardActionsBusinessLogicServiceMock.Setup(x => x.GetAllowedActionsAsync(It.IsAny<CardDetails>()))
             .ReturnsAsync([AllowedAction.Action1.ToString()]);
 
         var sut = new CardsController(loggerMock.Object,
             cardServiceMock.Object,
-            cardActionsBusinessLogicProviderMock.Object);
+            cardActionsBusinessLogicServiceMock.Object);
         
         // Act
         var result = await sut.GetAllowedActions(
@@ -56,11 +56,11 @@ public class CardControllerTests
         var cardServiceMock = new Mock<ICardService>();
         cardServiceMock.Setup(x => x.GetCardDetails(It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync((CardDetails?)null);
-        var cardActionsBusinessLogicProviderMock = new Mock<ICardActionsBusinessLogicProvider>();
+        var cardActionsBusinessLogicServiceMock = new Mock<ICardActionsBusinessLogicService>();
 
         var sut = new CardsController(loggerMock.Object,
             cardServiceMock.Object,
-            cardActionsBusinessLogicProviderMock.Object);
+            cardActionsBusinessLogicServiceMock.Object);
         
         // Act and Assert
         await Assert.ThrowsAsync<CardNotFoundException>(() => 

@@ -21,7 +21,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\RDSoft.OwnerCardActions.Application\RDSoft.OwnerCardActions.Application.csproj" />
-      <ProjectReference Include="..\RDSoft.OwnerCardActions.Domain\RDSoft.OwnerCardActions.Domain.csproj" />
       <ProjectReference Include="..\RDSoft.OwnerCardActions.Infrastructure\RDSoft.OwnerCardActions.Infrastructure.csproj" />
     </ItemGroup>
 

@@ -18,8 +18,8 @@ public class JsonActionRulesFileProviderTests
         object o;
         cacheMock.Setup(q => q.TryGetValue(It.IsAny<string>(), out o))
             .Returns(false);
-        
-        var jsonProviderMock = new Mock<JsonActionRulesFileProvider>(loggerMock.Object, cacheMock.Object);
+
+        var jsonProviderMock = new Mock<IActionRulesProvider>();
         jsonProviderMock.Setup(q => q.GetActionRules())
             .ReturnsAsync(new List<AllowedActionRuleset>());
         
